@@ -1,7 +1,8 @@
 exports.handler = async () => {
-  const mySecret = process.env.MY_SECRET;
+  const env1 = process.env.ENV_1;
+  const env2 = process.env.ENV_2;
   return {
     statusCode: 200,
-    body: `hello world!@#`,
+    body: `hello world${env1}-${env2}`,
   };
 };
